@@ -400,7 +400,7 @@ p {
 
 #cigarettes-smoked::before {
   content: "";
-  background: url(".././img/Bukowski.jpeg");
+  background: url(".././img/bukowski.jpeg");
   background-position: -256px -70px;
   position: absolute;
   top: 0px;
