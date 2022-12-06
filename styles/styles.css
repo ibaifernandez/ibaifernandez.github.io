@@ -9,12 +9,14 @@
   --color-primary: #103B53;
   --color-secondary: #F7E732;
   --color-secondary-opacity: rgba(247, 231, 50, 0.50);
+  --color-secondary-auxiliar: #F7E732;
   --color-tertiary: #3489AA;
   --color-tertiary-opacity: rgba(52, 137, 170,0.5);
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
+  --color-grey-1-auxiliar: #dbe1e8;
   --color-grey-2: #b2becd;
   --color-grey-3: #6c7983;
   --color-grey-4: #454e56;
@@ -27,10 +29,15 @@
 .light-mode {
   --color-primary: #FFFFFF;
   --color-secondary: #F56692;
+  --color-secondary-opacity: rgba(245, 102, 146, 0.50);
+  --color-secondary-auxiliar: #FFFFFF;
+  --color-tertiary: #DDDDDD;
+  --color-tertiary-opacity: rgba(255, 255, 255, 0.5);
   --color-white: #454e56;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #6c7983;
+  --color-grey-1-auxiliar: #EEEEEE;
   --color-grey-2: #6c7983;
   --color-grey-3: #6c7983;
   --color-grey-4: #454e56;
@@ -310,7 +317,7 @@ p {
   font-size: 3rem;
   font-weight: 700;
   text-align: right;
-  color: var(--color-secondary);
+  color: var(--color-secondary-auxiliar);
 }
 
 .about-container .right-about .about-item .abt-text .additional-large-text {
@@ -319,7 +326,7 @@ p {
   text-transform: uppercase;
   text-align: right;
   font-size: 2.75rem;
-  color: var(--color-grey-1);
+  color: var(--color-grey-1-auxiliar);
   text-shadow: var(--color-grey-6) 2px 2px 5px;
   letter-spacing: 2px;
 
@@ -331,7 +338,7 @@ p {
   text-transform: uppercase;
   text-align: right;
   font-size: 1.2rem;
-  color: var(--color-grey-1);
+  color: var(--color-grey-1-auxiliar);
   text-shadow: var(--color-grey-6) 2px 2px 5px;
   letter-spacing: 2px;
 }
@@ -342,7 +349,7 @@ p {
   text-transform: uppercase;
   text-align: right;
   font-size: 1.2rem;
-  color: var(--color-grey-1);
+  color: var(--color-grey-1-auxiliar);
   text-shadow: var(--color-grey-6) 2px 2px 5px;
   letter-spacing: 2px;
 }
@@ -355,7 +362,7 @@ p {
   text-transform: uppercase;
   margin:3px 0;
   text-shadow: var(--color-grey-6) 2px 2px 5px;
-  color: var(--color-grey-1);
+  color: var(--color-grey-1-auxiliar);
   letter-spacing: 2px;
 }
 
@@ -366,7 +373,7 @@ p {
   top: 12px;
   width: 2.75rem;
   height: 2px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary-auxiliar);
 }
 
 .about-container .left-about {
@@ -661,12 +668,22 @@ p {
   position: relative;
   border-radius: 15px;
 }
+
+.portfolios .portfolio-item .image {
+  border-radius: 15px;
+  background-color: #103B53;
+  box-shadow: 0px 2px 5px black;
+  border: 1px solid #103B53;
+}
+
 .portfolios .portfolio-item img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   border-radius: 15px;
+  border: 1px solid #103B53;
 }
+
 .portfolios .portfolio-item .hover-items {
   width: 100%;
   height: 100%;
