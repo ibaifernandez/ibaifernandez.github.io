@@ -795,7 +795,7 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form action="proceed()" class="contact-form">
+                        <form action="proceed()" class="contact-form" onsubmit="return false">
                             <div class="input-control i-c-2">
                                 <input name="name" type="text" required placeholder="YOUR NAME">
                                 <input name="email" type="email" required placeholder="YOUR EMAIL">
@@ -806,11 +806,13 @@
                             <div class="input-control">
                                 <textarea name="message" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
                             </div>
-                            <div class="submit-btn">
-                                <a class="main-btn">
-                                    <span class="btn-text">Submit</span>
-                                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-                                </a>
+                            <div class="btn-con">
+                                <div class="">
+                                    <button type="submit" value="submit" class="main-btn btn-text submit-btn" id="btn_submit" onclick="proceed();">
+                                        <span class="btn-text">Submit</span>
+                                        <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -835,9 +837,11 @@
         <div class="control" data-id="contact">
             <i class="fas fa-envelope-open"></i>
         </div>
-        <a class="control" href="https://ibaifernandez.com/wp-content/uploads/2022/12/221206-Resume-Ibai-Fernandez.pdf" target="_blank">
+        <div class="control" data-id="contact">
+        <a href="https://ibaifernandez.com/wp-content/uploads/2022/12/221206-Resume-Ibai-Fernandez.pdf" target="_blank">
             <i class="fa fa-paperclip"></i>
         </a>
+        </div>
     </div>
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>

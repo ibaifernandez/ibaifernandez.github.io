@@ -848,10 +848,12 @@ p {
   font-size: 1.3rem;
   color: var(--color-secondary);
 }
+
 .contact-content-con .left-contact .contact-icon {
   display: flex;
   margin-top: 3rem;
 }
+
 .contact-content-con .left-contact .contact-icon a {
   display: flex;
   align-items: center;
@@ -903,9 +905,18 @@ p {
 .contact-content-con .right-contact .i-c-2 :last-child {
   margin-left: 1.5rem;
 }
-.contact-content-con .right-contact .submit-btn {
+
+/* .contact-content-con .right-contact .submit-btn {
   display: flex;
   justify-content: center;
+} */
+
+.submit-btn {
+  justify-content: center;
+  font-family: "Righteous", sans-serif;
+  background: transparent;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 /*Independed components*/
@@ -937,6 +948,10 @@ p {
 }
 
 .main-btn .btn-text {
+  padding: 0 2rem;
+}
+
+.main-btn .submit-btn .btn-text {
   padding: 0 2rem;
 }
 
@@ -1097,6 +1112,11 @@ p {
 
   .controls .control {
     margin: 1rem 2rem;
+  }
+
+  .contact-content-con .left-contact .contact-icon {
+    justify-content: space-between;
+   
   }
   
 }

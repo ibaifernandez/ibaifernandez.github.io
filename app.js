@@ -27,7 +27,6 @@ function checkmail(input) {
 function proceed() {
   var name = document.getElementById("name");
   var email = document.getElementById("email");
-  var phone = document.getElementById("phone");
   var subject = document.getElementById("subject");
   var msg = document.getElementById("message");
   var errors = "";
@@ -40,11 +39,7 @@ function proceed() {
   } else if (checkmail(email.value) == false) {
     alert("Please, provide a valid email address.");
     return false;
-  }
-  // else if(phone.value == ""){
-  // phone.className = 'error';
-  // return false;}
-  else if (subject.value == "") {
+  } else if (subject.value == "") {
     subject.className = "error";
     return false;
   } else if (msg.value == "") {
