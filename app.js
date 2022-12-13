@@ -48,7 +48,7 @@ function proceed() {
   } else {
     $.ajax({
       type: "POST",
-      url: "submit.php",
+      url: "/submit.php",
       data: $("#contact_form").serialize(),
       success: function (msg) {
         alert(msg);
