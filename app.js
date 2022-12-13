@@ -24,6 +24,7 @@ function checkmail(input) {
     return false;
   }
 }
+
 function proceed() {
   var name = document.getElementById("name");
   var email = document.getElementById("email");
