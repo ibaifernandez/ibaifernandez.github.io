@@ -16,51 +16,43 @@
 /*    CONTACT FORM
 /*-----------------------------------------------------------------------------------*/
 
-function checkmail(input) {
-  var pattern1 = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-  if (pattern1.test(input)) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function proceed() {
-  var name = document.getElementById("name");
-  var email = document.getElementById("email");
-  var subject = document.getElementById("subject");
-  var msg = document.getElementById("message");
-  var errors = "";
-  if (name.value == "") {
-    name.className = "error";
-    return false;
-  } else if (email.value == "") {
-    email.className = "error";
-    return false;
-  } else if (checkmail(email.value) == false) {
-    alert("Please, provide a valid email address.");
-    return false;
-  } else if (subject.value == "") {
-    subject.className = "error";
-    return false;
-  } else if (msg.value == "") {
-    msg.className = "error";
-    return false;
-  } else {
-    $.ajax({
-      type: "POST",
-      url: "/submit.php",
-      data: $("#contact_form").serialize(),
-      success: function (msg) {
-        alert(msg);
-        if (msg) {
-          $("#contact_form").fadeOut(1000);
-          $("#contact_message").fadeIn(1000);
-          var element = document.getElementById("contact_message");
-          element.html("Thanks! :) The message was succesfully sent!");
-          return true;
-        }
-      },
-    });
-  }
-}
+function checkmail(input){
+  var pattern1=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  	if(pattern1.test(input)){ return true; }else{ return false; }}     
+    
+    function proceed(){
+    	var name = document.getElementById("name");
+		var email = document.getElementById("email");
+		var phone = document.getElementById("phone");
+		var subject = document.getElementById("subject");
+		var msg = document.getElementById("message");
+		var errors = "";
+		if(name.value == ""){ 
+		name.className = 'error';
+	  	  return false;}    
+		  else if(email.value == ""){
+		  email.className = 'error';
+		  return false;}
+		    else if(checkmail(email.value)==false){
+		        alert('Por favor, provee una direcci¨®n de correo electr¨®nico v¨¢lida.');
+		        return false;}
+		   else if(msg.value == ""){
+		        msg.className = 'error';
+		        return false;}
+		   else 
+		  {
+	$.ajax({
+		type: "POST",
+		url: "./submit.php",
+		data: $("#contact_form").serialize(),
+		success: function(msg){
+		alert(msg);
+		if(msg){
+			$('#contact_form').fadeOut(1000);
+			$('#contact_message').fadeIn(1000);
+			var element = document.getElementById("contact_message");
+			element.html("Gracias :) Este mensaje fue enviado con Ã©xito.");
+			return true;
+		}}
+	});
+}};

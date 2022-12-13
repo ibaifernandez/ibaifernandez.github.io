@@ -11,7 +11,7 @@ $to = 'info@ibaifernandez.com';
     if (isset($_POST['message'])) { $message = $_POST['message']; }
 	
 	// Construct subject of the email
-	$subject = 'A message has been sent from IF\'s portfolio page from ' . $name;
+	$subject = 'Has recibido un mensaje desde el portafolio de Ibai Fernández enviado por ' . $name;
 
 	// Construct email body
 	$body_message .= 'Name: ' . $name . "\r\n";
@@ -26,10 +26,10 @@ $to = 'info@ibaifernandez.com';
 	$mail_sent = mail($to, $subject, $body_message, $headers);
 
 	if ($mail_sent == true) { 
-		echo "Sent successfully.";
+		echo "Enviado con éxito.";
 	}
 	else { 
-		echo "There's been some mistake. Please, try again.";
+		echo "Ha habido un error. Por favor, inténtalo de nuevo.";
 	} 
 
 ?>
