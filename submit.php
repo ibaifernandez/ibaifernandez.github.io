@@ -1,5 +1,3 @@
-submit.php
-
 <?php
 
 // specify your email here
