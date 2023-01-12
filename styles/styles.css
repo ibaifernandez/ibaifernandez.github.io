@@ -1042,6 +1042,10 @@ p {
   color:var(--color-secondary);
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 970px) {
   .container {
     padding: 7rem 6rem;
@@ -1259,6 +1263,7 @@ p {
     font-size: 2.3rem;
   }
 }
+
 @media screen and (max-width: 1432px) {
   .container {
     padding: 7rem 11rem;
