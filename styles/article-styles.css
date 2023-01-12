@@ -44,7 +44,6 @@ body {
     font-size: 1.1rem;
     color: var(--color-white);
     margin:0;
-    width:100%;
 }
 
 a {
@@ -256,4 +255,5 @@ footer {
     .share-me {
       display: none;
     }
+  }
   
